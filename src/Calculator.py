@@ -48,6 +48,6 @@ class Calculator:
         self.result = a * a
         return self.result
 
-    def root(self, b, a):
+    def root(self, a, ):
         self.result = a * a / a
         return self.result
