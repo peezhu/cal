@@ -1,8 +1,8 @@
-##Calculator
+## Calculator
 
-###CVS 
-####Addition,
-#####Multiplication
-#####Division
-#####Square
-#####Square Root
+### CVS 
+#### Addition,
+##### Multiplication
+##### Division
+##### Square
+##### Square Root
