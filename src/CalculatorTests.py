@@ -35,8 +35,13 @@ class MyTestCase(unittest.TestCase):
     def test_multiply_method_calculator(self):
         calculator = Calculator()
 
-        self.assertEqual(calculator.multiply(3, 3), 9)
-        self.assertEqual(calculator.result, 9)
+        test_data = CsvReader('/src/Multiplication.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(calculator.multiply(row['Value 1'], row['Value 2']), row('Result'))
+            self.assertEqual(calculator.result, row['Result'])
+
+
 
     def test_divide_method_calculator(self):
         calculator = Calculator()
@@ -49,13 +54,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_square_method_calculator(self):
         calculator = Calculator()
-        self.assertEqual(calculator.square(5, ), 25)
-        self.assertEqual(calculator.result, 25)
+
 
     def test_square_root_method_calculator(self):
         calculator = Calculator()
-        self.assertEqual(calculator.root(5, ), 5)
-        self.assertEqual(calculator.result, 5)
+
 
 
 if __name__ == '__main__':
