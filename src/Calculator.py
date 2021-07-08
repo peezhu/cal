@@ -6,7 +6,10 @@ def addition(a, b):
 
 
 def subtraction(a, b):
-    return a - b
+    a = int(a)
+    b = int(b)
+    c = a - b
+    return c
 
 
 def multiplication(a, b):
