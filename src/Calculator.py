@@ -27,10 +27,12 @@ def division(a, b):
 
 
 def square(a, ):
+    a = int(a)
     return a * a
 
 
 def square_root(a, ):
+    a = int(a)
     return a * a / a
 
 

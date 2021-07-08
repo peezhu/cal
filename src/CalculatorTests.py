@@ -64,6 +64,12 @@ class MyTestCase(unittest.TestCase):
     def test_square_root_method_calculator(self):
         calculator = Calculator()
 
+        test_data = CsvReader('/src/Root.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(calculator.root(row['Value 1']), row('Result'))
+            self.assertEqual(calculator.result, row['Result'])
+
 
 
 
