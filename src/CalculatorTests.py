@@ -34,13 +34,18 @@ class MyTestCase(unittest.TestCase):
 
     def test_multiply_method_calculator(self):
         calculator = Calculator()
+
         self.assertEqual(calculator.multiply(3, 3), 9)
         self.assertEqual(calculator.result, 9)
 
     def test_divide_method_calculator(self):
         calculator = Calculator()
-        self.assertEqual(calculator.divide(6, 3), 2)
-        self.assertEqual(calculator.result, 2)
+
+        test_data = CsvReader('/src/Division.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(calculator.divide(row['Value 1'], row['Value 2']), row('Result'))
+            self.assertEqual(calculator.result, row['Result'])
 
     def test_square_method_calculator(self):
         calculator = Calculator()
