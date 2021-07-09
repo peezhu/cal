@@ -8,7 +8,7 @@ def addition(a, b):
 def subtraction(a, b):
     a = int(a)
     b = int(b)
-    c = a - b
+    c = b - a
     return c
 
 
@@ -22,7 +22,7 @@ def multiplication(a, b):
 def division(a, b):
     a = int(a)
     b = int(b)
-    c = a / b
+    c = b / a
     return c
 
 
@@ -43,25 +43,25 @@ class Calculator:
         pass
 
     def add(self, a, b):
-        self.result = a + b
+        self.result = int(a) + int(b)
         return self.result
 
     def subtract(self, a, b):
-        self.result = a - b
+        self.result = int(b) - int(a)
         return self.result
 
     def multiply(self, a, b):
-        self.result = a * b
+        self.result = int(a) * int(b)
         return self.result
 
     def divide(self, a, b):
-        self.result = a / b
+        self.result = int(b) / int(a)
         return self.result
 
     def square(self, a, ):
-        self.result = a * a
+        self.result = int(a) * int(a)
         return self.result
 
     def root(self, a, ):
-        self.result = a * a / a
+        self.result = int(a) * int(a) / int(a)
         return self.result

@@ -3,6 +3,6 @@
 ### CVS 
 #### Addition,
 ##### Multiplication
-##### Division
 ##### Square
+##### Division
 ##### Square Root
