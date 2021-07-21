@@ -20,9 +20,9 @@ def multiplication(a, b):
 
 
 def division(a, b):
-    a = int(a)
-    b = int(b)
-    c = b / a
+    a = float(a)
+    b = float(b)
+    c = a / b
     return c
 
 
@@ -32,7 +32,7 @@ def square(a, ):
 
 
 def square_root(a, ):
-    a = int(a)
+    a = float(a)
     return a * a / a
 
 
@@ -55,7 +55,7 @@ class Calculator:
         return self.result
 
     def divide(self, a, b):
-        self.result = int(b) / int(a)
+        self.result = float(a) / float(b)
         return self.result
 
     def square(self, a, ):
@@ -63,5 +63,5 @@ class Calculator:
         return self.result
 
     def root(self, a, ):
-        self.result = int(a) * int(a) / int(a)
+        self.result = float(a * a / a)
         return self.result

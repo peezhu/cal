@@ -42,8 +42,8 @@ class MyTestCase(unittest.TestCase):
 
         test_data = CsvReader('/src/Division.csv').data
         for row in test_data:
-            self.assertEqual(calculator.divide(row['Value 1'], row['Value 2']), int(row['Result']))
-            self.assertEqual(calculator.result, int(row['Result']))
+            self.assertEqual(calculator.divide(row['Value 2'], row['Value 1']), float(row['Result']))
+            self.assertEqual(calculator.result, float(row['Result']))
 
     def test_square_method_calculator(self):
         calculator = Calculator()
@@ -52,14 +52,6 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             self.assertEqual(calculator.square(row['Value 1']), int(row['Result']))
             self.assertEqual(calculator.result, row['Result'])
-
-    def test_square_root_method_calculator(self):
-        calculator = Calculator()
-
-        test_data = CsvReader('/src/Root.csv').data
-        for row in test_data:
-            self.assertEqual(calculator.root(row['Value 1']), int(row['Result']))
-            self.assertEqual(calculator.result, int(row['Result']))
 
 
 if __name__ == '__main__':
